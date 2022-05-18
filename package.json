@@ -1,0 +1,30 @@
+{
+  "name": "addressbook",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node app.js",
+    "lint": "jshint app.js database*.js migrate.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohabamroo/addressbook.git"
+  },
+  "author": "mohabamroo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mohabamroo/addressbook/issues"
+  },
+  "homepage": "https://github.com/mohabamroo/addressbook#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "pg": "^8.7.3",
+    "sequelize": "^6.19.2"
+  },
+  "devDependencies": {
+    "jest": "^28.1.0",
+    "jshint": "^2.13.4"
+  }
+}
