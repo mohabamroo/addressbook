@@ -2,6 +2,8 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const db = require("./database");
 const app = express();
+require("dotenv").config();
+
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/person/:id", function (req, res) {

@@ -1,7 +1,17 @@
 const db = require("./database");
 
 beforeAll(async () => {
-  await db.sequelize.sync();
+  try {
+    console.log("tryin got sync db");
+    await db.sequelize.sync();
+    console.log("after db sync");
+  } catch (err) {
+    console.table(
+      "🚀 ~ file: database.test.js ~ line 9 ~ beforeAll ~ err",
+      err
+    );
+    console.error("failed to sync db");
+  }
 });
 
 test("create person", async () => {
